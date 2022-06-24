@@ -5,8 +5,8 @@ from django.forms import BooleanField, CharField, DateTimeField
 
 
 class Todo(models.Model):
-    start_time = models.TimeField()
-    end_time = models.TimeField()
+    start_time = models.TimeField(default="")
+    end_time = models.TimeField(default="")
     content = models.CharField(default="", max_length=100)
     is_done = models.BooleanField(default=False)
 
